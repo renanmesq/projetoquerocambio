@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="parallax">
+<div class="bg"></div>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QueroCâmbio | Câmbio Exchange Wechsel Online</title>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="css/bootstrap-4.0.0.css" rel="stylesheet">
+<link href="css/bootstrap-formhelpers.min.css">
+<link href="css/bootstrap-formhelpers.css">
+<link rel="shortcut icon" href="favicon.png">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+</head>
+<body>
+<nav class="navbar fixed-top navbar-expand navbar-dark bg-dark">
+  <div class="container-fluid">
+    <div class="navbar-header"> <a class="navbar-brand" href="#home"><img src="../logo/LogoNavBar.png" alt="logo" style="width:50px"></a> </div>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active"><a class="nav-link" href="#home">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="quemsomos.html">Quem Somos</a></li>
+      <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+      <li class="nav-item"><a class="nav-link" href="atendimento.html">Pontos de Atendimento</a></li>
+      <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="jumbotron jumbotron-fluid text-center mx-auto" align="center">
+  <div class="page-header"> <img src="../fxdone.com.br/img/Quero_Cambio03.png" style="align-self: center" alt="logo" width="250"> </div>
+  <p class="lead">Bem-vindo ao QueroCâmbio, sua casa de câmbio online.</p>
+  <hr class="my-4">
+  <p class="text-justify">Aqui entra aquele texto maroto de propaganda para deixar o cliente feliz e com vontade de comprar.</p>
+  <div class="container">
+    <div class="form-group row">
+      <label class="col" for="moeda">Moeda</label>
+      <select id="moeda" class="custom-select">
+        <option selected value="">--Moeda--</option>
+        <option value="EUSCOM">Dólar Americano - USD</option>
+        <option value="EURBRL">Euro - EUR</option>
+        <option value="GBPBRL">Libra Esterlina - GBP</option>
+        <option value="CADBRL">Dólar Canadense - CAD</option>
+        <option value="CNYBRL">Yuan Chinês - CNY</option>
+        <option value="JPYBRL">Yene Japonês - JPY</option>
+        <option value="PENBRL">Novo Sol Peruano - PEN</option>
+        <option value="CHFBRL">Franco Suíço - CHF</option>
+        <option value="NZDBRL">Dólar Neozelandês - NZD</option>
+        <option value="CLPBRL">Peso Chileno - CLP</option>
+        <option value="MXNBRL">Peso Mexicano - MXN</option>
+        <option value="ARSBRL">Peso Argentino - ARS</option>
+        <option value="AUDBRL">Dólar Australiano - AUD</option>
+        <option value="UYUBRL">Peso Uruguaio - UYU</option>
+      </select>
+    </div>
+    <div class="form-group row">
+      <label class="col" for="taxaVal">Valor Unitário</label>
+      <input type="text" class="form-control" id="taxaVal" readonly>
+    </div>
+    <div class="form-group row">
+      <label class="col" for="quant">Quantidade</label>
+      <input type="number" class="form-control" id="quant">
+    </div>
+    <div class="form-group row">
+      <label class="col" for="valorTot">Valor Total</label>
+      <input type="text" class="form-control" id="valorTot" readonly>
+    </div>
+  </div>
+  <p class="lead"> <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#cModal" data-backdrop="static" role="button" id="cBotao" value="Compra">Quero comprar!</a> </p>
+</div>
+<div id="cModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <form class="modal-body" id="formCompra">
+        <div class="row">
+          <div class="col form-group">
+            <label for="inputName"><strong>Nome Completo</strong></label>
+            <input type="text" class="form-control" id="inputName" placeholder="Insira nome">
+          </div>
+          <div class="col form-group">
+            <label for="inputTel"><strong>Telefone Celular</strong></label>
+            <input type="text" class="form-control" id="inputTel" data-country="BR" placeholder="(11)11111-1111">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm form-group">
+            <label for="cep">CEP</label>
+            <input type="text" class="form-control" id="cep">
+          </div>
+          <div class="col-sm form-group">
+            <label for="bairro">Bairro</label>
+            <input type="text" class="form-control" id="bairro">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col form-group">
+            <label for="inputAddress">Endereço</label>
+            <input type="text" class="form-control" placeholder="Logradouro" id="logradouro">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm form-group">
+            <label for="cidade">Cidade</label>
+            <input type="text" class="form-control" id="cidade">
+          </div>
+        </div>
+		<div class="row">
+		  <div class="col-xs-12">
+			<div class="panel panel-default">
+			  <div class="panel-body">
+				<span class="glyphicon glyphicon-cloud-uplaod"></span>
+				<h2>File Uploaoder</h2>
+				<div class="progress">
+				 <div class="progress-bar" role="progressbar"></div> 
+				</div>
+				<button class="btn btn-lg upload-btn" type="button">Upload File</button>
+			  </div>
+			</div>
+		  </div>  
+		</div>
+		
+		<input id="upload-input" type="file" name="uploads[]" multiple="multiple">
+      </form>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="text-center col">
+    <h4>Visite nossa Page no Facebook <i class="fa fa-facebook-square" style="color: deepskyblue"></i> </h4>
+    <p>Copyright &copy; 2018 &middot; All Rights Reserved &middot;</p>
+  </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jquery-3.2.1.min.js"></script> 
+<script src="js/jquery.autocomplete-address.min.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="js/popper.min.js"></script> 
+<script src="js/bootstrap-4.0.0.js"></script> 
+<script src="js/moedaquantidade.js"></script> 
+<script src="js/fundoanimado.js"></script> 
+<script src="js/bootstrap-formhelpers-phone.js"></script> 
+</body>
+</html>
